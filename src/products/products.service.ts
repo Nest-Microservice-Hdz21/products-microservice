@@ -10,7 +10,6 @@ export class ProductsService {
   constructor(private prisma: PrismaService) {}
 
   async create(createProductDto: CreateProductDto) {
-    console.log(createProductDto);
     const product = await this.prisma.product.create({
       data: createProductDto,
     });
